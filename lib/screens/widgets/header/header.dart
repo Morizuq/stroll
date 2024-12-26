@@ -12,7 +12,7 @@ class DetailsHeader extends StatelessWidget {
 
     final screenHeight = MediaQuery.of(context).size.height;
     return Container(
-      height: screenHeight * 0.6,
+      height: screenHeight * 0.63,
       decoration: BoxDecoration(
         image: DecorationImage(
             image: AssetImage('assets/images/img_bg.png'),

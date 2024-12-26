@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stroll/theme/app_colors.dart';
+import 'package:stroll/components/buttons/option_buttons.dart';
 
 class Options extends StatefulWidget {
   const Options({super.key});
@@ -39,59 +39,16 @@ class _OptionsState extends State<Options> {
           mainAxisSpacing: 13,
         ),
         itemBuilder: (context, index) {
-          return GestureDetector(
+          return OptionButton(
               onTap: () {
                 setState(() {
                   _selectedIndex = index;
                 });
               },
-              child: optionTile(
-                  Theme.of(context), options[index], _selectedIndex == index));
+              option: options[index],
+              isSelected: _selectedIndex == index);
         });
   }
 }
 
-// Tile widget || Container for each option
-Widget optionTile(
-    ThemeData theme, Map<String, String> option, bool isSelected) {
-  return Container(
-    padding: const EdgeInsets.symmetric(
-      horizontal: 10,
-    ),
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(15),
-      color: AppColors.darkGrey,
-      border: Border.all(
-          color: isSelected ? AppColors.lavenderPurple : Colors.transparent,
-          width: 2),
-    ),
-    child: Row(
-      children: [
-        optionId(theme, option['id']!, isSelected: isSelected),
-        const SizedBox(width: 5),
-        Expanded(
-          child: Text(option['label']!,
-              style: theme.textTheme.bodySmall
-                  ?.copyWith(color: Colors.white.withAlpha(100), fontSize: 12)),
-        ),
-      ],
-    ),
-  );
-}
-
-// Option ID (A, B, C, D)
-Widget optionId(ThemeData theme, String option, {bool isSelected = false}) {
-  return Container(
-    padding: const EdgeInsets.all(5),
-    decoration: BoxDecoration(
-      shape: BoxShape.circle,
-      color: isSelected ? AppColors.lavenderPurple : Colors.transparent,
-      border: Border.all(
-          color: isSelected ? Colors.transparent : Colors.white.withAlpha(100),
-          width: 2),
-    ),
-    child: Text(option,
-        style: theme.textTheme.bodySmall?.copyWith(
-            color: isSelected ? Colors.white : Colors.white.withAlpha(100))),
-  );
-}
+// Tile widget || Container for each opti
