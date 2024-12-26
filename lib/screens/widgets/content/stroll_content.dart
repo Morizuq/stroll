@@ -7,15 +7,22 @@ class DetailsContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 10,
-        vertical: 16,
-      ),
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
       color: Colors.black,
       child: Column(
-        spacing: 15,
-        children: [Options(), ContentFooter()],
+        children: [
+          Text(
+            "\"Mine is definitely the peace in the morning.\"",
+            style: theme.textTheme.bodySmall?.copyWith(
+                color: theme.colorScheme.onPrimary.withAlpha(100),
+                fontStyle: FontStyle.italic),
+          ),
+          Options(),
+          const SizedBox(height: 15),
+          ContentFooter()
+        ],
       ),
     );
   }

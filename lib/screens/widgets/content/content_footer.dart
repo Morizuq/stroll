@@ -32,8 +32,8 @@ class ContentFooter extends StatelessWidget {
 
 Widget _buildRecorder() {
   return Container(
-    width: 40,
-    height: 40,
+    width: 45,
+    height: 45,
     decoration: BoxDecoration(
       shape: BoxShape.circle,
       border: Border.all(color: AppColors.lavenderPurple, width: 2),
@@ -52,8 +52,8 @@ Widget _buildRecorder() {
 
 Widget _buildCTA() {
   return Container(
-    width: 40,
-    height: 40,
+    width: 45,
+    height: 45,
     decoration:
         BoxDecoration(shape: BoxShape.circle, color: AppColors.lavenderPurple),
     child: Center(child: Icon(Icons.arrow_forward_rounded, weight: 10)),

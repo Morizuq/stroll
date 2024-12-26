@@ -10,7 +10,7 @@ class UserTile extends StatelessWidget {
     final width = MediaQuery.sizeOf(context).width;
     final height = MediaQuery.sizeOf(context).height;
     return Container(
-      height: height * 0.14,
+      height: height * 0.13,
       width: width,
       padding: const EdgeInsets.fromLTRB(18, 14, 18, 0),
       decoration: BoxDecoration(

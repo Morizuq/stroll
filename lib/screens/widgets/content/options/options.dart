@@ -50,5 +50,3 @@ class _OptionsState extends State<Options> {
         });
   }
 }
-
-// Tile widget || Container for each opti
