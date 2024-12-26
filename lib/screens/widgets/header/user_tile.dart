@@ -10,7 +10,7 @@ class UserTile extends StatelessWidget {
     final width = MediaQuery.sizeOf(context).width;
     final height = MediaQuery.sizeOf(context).height;
     return Container(
-      height: height * 0.14,
+      height: height * 0.13,
       width: width,
       padding: const EdgeInsets.fromLTRB(18, 14, 18, 0),
       decoration: BoxDecoration(
@@ -19,11 +19,11 @@ class UserTile extends StatelessWidget {
         end: Alignment.bottomCenter,
         stops: const [0.0, 0.3, 0.5, 0.7, 1.0],
         colors: [
-          AppColors.darkerGrey.withAlpha(10),
-          AppColors.darkerGrey.withAlpha(80),
-          AppColors.darkerGrey.withAlpha(190),
-          AppColors.darkerGrey.withAlpha(204),
-          AppColors.darkerGrey,
+          Colors.black.withAlpha(10),
+          Colors.black.withAlpha(80),
+          Colors.black.withAlpha(190),
+          Colors.black.withAlpha(204),
+          Colors.black,
         ],
       )),
       child: LayoutBuilder(
