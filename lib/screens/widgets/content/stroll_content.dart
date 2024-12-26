@@ -9,7 +9,7 @@ class DetailsContent extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Container(
-      padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+      padding: const EdgeInsets.fromLTRB(16, 10, 16, 0),
       color: Colors.black,
       child: Column(
         children: [
@@ -19,6 +19,7 @@ class DetailsContent extends StatelessWidget {
                 color: theme.colorScheme.onPrimary.withAlpha(100),
                 fontStyle: FontStyle.italic),
           ),
+          const SizedBox(height: 15),
           Options(),
           const SizedBox(height: 15),
           ContentFooter()
