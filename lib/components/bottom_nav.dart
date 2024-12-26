@@ -93,22 +93,24 @@ class _BottomNavbarState extends State<BottomNavbar> {
 BottomNavigationBarItem _bottomNavbarItem(String icon, {int? badgeCount}) {
   return BottomNavigationBarItem(
     backgroundColor: AppColors.darkerGrey,
-    icon: badgeCount != null ? BottomNavbarBadge(
-      count: badgeCount,
-      child: SvgPicture.asset(
-        'assets/icons/ic_$icon.svg',
-        width: 24,
-        height: 24,
-        colorFilter:
-            ColorFilter.mode(Colors.white.withAlpha(100), BlendMode.srcIn),
-      ),
-    ) : SvgPicture.asset(
-      'assets/icons/ic_$icon.svg',
-      width: 24,
-      height: 24,
-      colorFilter:
-          ColorFilter.mode(Colors.white.withAlpha(100), BlendMode.srcIn),
-    ),
+    icon: badgeCount != null
+        ? BottomNavbarBadge(
+            count: badgeCount,
+            child: SvgPicture.asset(
+              'assets/icons/ic_$icon.svg',
+              width: 24,
+              height: 24,
+              colorFilter: ColorFilter.mode(
+                  Colors.white.withAlpha(100), BlendMode.srcIn),
+            ),
+          )
+        : SvgPicture.asset(
+            'assets/icons/ic_$icon.svg',
+            width: 24,
+            height: 24,
+            colorFilter:
+                ColorFilter.mode(Colors.white.withAlpha(100), BlendMode.srcIn),
+          ),
     label: '',
   );
 }

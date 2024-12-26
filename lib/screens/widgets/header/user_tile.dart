@@ -19,11 +19,11 @@ class UserTile extends StatelessWidget {
         end: Alignment.bottomCenter,
         stops: const [0.0, 0.3, 0.5, 0.7, 1.0],
         colors: [
-          AppColors.darkerGrey.withAlpha(10),
-          AppColors.darkerGrey.withAlpha(80),
-          AppColors.darkerGrey.withAlpha(190),
-          AppColors.darkerGrey.withAlpha(204),
-          AppColors.darkerGrey,
+          Colors.black.withAlpha(10),
+          Colors.black.withAlpha(80),
+          Colors.black.withAlpha(190),
+          Colors.black.withAlpha(204),
+          Colors.black,
         ],
       )),
       child: LayoutBuilder(
